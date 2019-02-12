@@ -1,0 +1,1 @@
+\Registry\machine\software\classes\CLSID\{679f85cb-0220-4080-b29b-5540cc05aab6}\ShellFolder [1]
