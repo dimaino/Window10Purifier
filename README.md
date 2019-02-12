@@ -8,3 +8,6 @@ https://gist.github.com/alirobe/7f3b34ad89a159e6daa1
 
 
 Currently, working on more changes.
+
+Used this resource to pin and unpin taskbar items ever since the windows removed the Pin-App command:
+http://www.technosys.net/products/utils/pintotaskbar
