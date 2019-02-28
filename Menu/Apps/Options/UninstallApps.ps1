@@ -12,23 +12,24 @@ Title
 
 $tweaks = @(
 	"RequireAdmin",
+	"InstallPhotoViewer"
 	# "DisableOneDrive",
 	#"UninstallOneDrive",
-	"UninstallMsftBloat",
-	"UninstallThirdPartyBloat",
+	#"UninstallMsftBloat",
+	#"UninstallThirdPartyBloat",
 	#"UninstallWindowsStore",
-	"DisableXboxFeatures",
-	"DisableAdobeFlash",
-	"UninstallMediaPlayer",
-	"UninstallInternetExplorer",
+	#"DisableXboxFeatures",
+	#"DisableAdobeFlash",
+	#"UninstallMediaPlayer",
+	#"UninstallInternetExplorer",
 	# "UninstallWorkFolders",
 	# "InstallLinuxSubsystem",
 	# "InstallHyperV",
-	"SetPhotoViewerAssociation",
-	"AddPhotoViewerOpenWith",
+	#"SetPhotoViewerAssociation",
+	#"AddPhotoViewerOpenWith",
 	# "UninstallPDFPrinter",
-	"UninstallXPSPrinter",
-	"RemoveFaxPrinter"
+	#"UninstallXPSPrinter",
+	#"RemoveFaxPrinter"
 )
 
 Function RequireAdmin {
@@ -36,6 +37,12 @@ Function RequireAdmin {
 		Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`" $PSCommandArgs" -WorkingDirectory $pwd -Verb RunAs
 		Exit
 	}
+}
+
+# Install PhotoViewer
+Function InstallPhotoViewer {
+	Write-Output $PSScriptRoot
+	reg import $PSScriptRoot\ActivateWindowsPhotoViewer.reg
 }
 
 # Disable OneDrive
@@ -110,16 +117,16 @@ Function UninstallMsftBloat {
 	Get-AppxPackage -AllUsers "Microsoft.Wallet" | Remove-AppxPackage
 	Get-AppxPackage -AllUsers "Microsoft.WebpImageExtension" | Remove-AppxPackage
 	Get-AppxPackage -AllUsers "Microsoft.WebMediaExtensions" | Remove-AppxPackage
-	#Get-AppxPackage -AllUsers "Microsoft.Windows.ParentalControls" | Remove-AppxPackage
-	#Get-AppxPackage -AllUsers "Microsoft.Windows.PeopleExperienceHost" | Remove-AppxPackage
-	Get-AppxPackage -AllUsers "Microsoft.WindowsCalculator" | Remove-AppxPackage
+	Get-AppxPackage -AllUsers "Microsoft.Windows.ParentalControls" | Remove-AppxPackage
+	Get-AppxPackage -AllUsers "Microsoft.Windows.PeopleExperienceHost" | Remove-AppxPackage
+	#Get-AppxPackage -AllUsers "Microsoft.WindowsCalculator" | Remove-AppxPackage
 	Get-AppxPackage -AllUsers "Microsoft.WindowsAlarms" | Remove-AppxPackage
 	Get-AppxPackage -AllUsers "Microsoft.WindowsCamera" | Remove-AppxPackage
 	Get-AppxPackage -AllUsers "microsoft.windowscommunicationsapps" | Remove-AppxPackage
 	Get-AppxPackage -AllUsers "Microsoft.WindowsFeedbackHub" | Remove-AppxPackage
 	Get-AppxPackage -AllUsers "Microsoft.WindowsMaps" | Remove-AppxPackage
 	Get-AppxPackage -AllUsers "Microsoft.WindowsPhone" | Remove-AppxPackage
-	Get-AppxPackage -AllUsers "Microsoft.Windows.Photos" | Remove-AppxPackage
+	#Get-AppxPackage -AllUsers "Microsoft.Windows.Photos" | Remove-AppxPackage
 	Get-AppxPackage -AllUsers "Microsoft.WindowsSoundRecorder" | Remove-AppxPackage
 	Get-AppxPackage -AllUsers "Microsoft.YourPhone" | Remove-AppxPackage
 	Get-AppxPackage -AllUsers "Microsoft.ZuneMusic" | Remove-AppxPackage

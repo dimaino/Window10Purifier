@@ -12,6 +12,7 @@ Title
 
 $tweaks = @(
 	"RequireAdmin",
+	"UninstallPhotoViewer"
 	# "EnableOneDrive",
 	# "InstallOneDrive",
 	# "InstallMsftBloat",
@@ -26,7 +27,7 @@ $tweaks = @(
 	# "UninstallHyperV",
 	# "UnsetPhotoViewerAssociation",
 	# "RemovePhotoViewerOpenWith",
-	"InstallPDFPrinter"
+	#"InstallPDFPrinter"
 	# "InstallXPSPrinter",
 	# "AddFaxPrinter",
 )
@@ -36,6 +37,12 @@ Function RequireAdmin {
 		Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`" $PSCommandArgs" -WorkingDirectory $pwd -Verb RunAs
 		Exit
 	}
+}
+
+# Uninstall PhotoViewer
+Function UninstallPhotoViewer {
+	Write-Output $PSScriptRoot
+	reg import $PSScriptRoot\DeactivateWindowsPhotoViewer.reg
 }
 
 # Enable OneDrive
