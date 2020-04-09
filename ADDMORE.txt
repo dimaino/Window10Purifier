@@ -1,0 +1,130 @@
+STEP 001: Install Windows 10 Pro
+STEP 002: Update Windows
+STEP 003: Driver Installs (Nvidia)
+STEP 004: Windows Key -> Color Settings -> Choose your default app mode -> Dark
+STEP 005: Windows Key -> Notification & Actions settings -> Disable all Notifications
+STEP 006: Windows Key -> Notification & Actions settings -> Add Or Remove quick actions -> Disable all except: All Settings, Network, and VPN.
+STEP 007: Windows Key -> Edit Power Options -> Turn off te display -> Never.
+STEP 008: Windows Key -> Edit Power Options -> Put the computer to sleep -> Never.
+STEP 009: Windows Key -> Edit Power Options -> Turn off t display -> Change advanced power settings -> High performance.
+STEP 010: Windows Key -> Edit Power Options -> Turn off te display -> Change advanced power settings -> Hard disk -> Turn off hard disk after -> Settings (Minutes) -> 0.
+STEP 011: Windows Key -> Edit Power Options -> Turn off te display -> Change advanced power settings -> Sleep -> Allow hybrid sleep -> Settings -> Off.
+STEP 012: Windows Key -> Edit Power Options -> Turn off te display -> Change advanced power settings -> Sleep -> Allow wake timers -> 
+STEP 013: Windows Key -> Edit Power Options -> Turn off te display -> Change advanced power settings -> Disable.
+STEP 014: Windows Key -> Edit Power Options -> Turn off te display -> Change advanced power settings -> Display -> Turn off display after -> Setting (Minutes) -> 0.
+STEP 015: Windows Key -> Edit Power Options -> Turn off te display -> Change advanced power settings -> Apply.
+STEP 016: Windows Key -> Edit Power Options -> Go back to Power options in the address bar -> Choose what the power button does -> Change settings thatare currently unavailable -> Turn on fast startup (recommended) -> Un-Check -> Save changes.
+STEP 017: Windows Key -> Change user account control settings -> Never notify -> OK. -> Yes.
+STEP 018: Windows Key -> View your product ID -> Change product key or upgrade your edition of windows -> 
+STEP 019: Windows Key -> File Explorer Options -> Privacy -> Uncheck both -> Clear -> OK.
+STEP 020: Windows Key -> Allow remote access to your computer -> Remote Desktop -> Allow remote connections to this computer -> Apply
+STEP 021: Windows Key -> Control Panel -> System and Security -> System -> Change settings -> Change the name.
+STEP 022: Windows Key -> customize virtual desktop settings -> Virtual desktops -> Pressinf Alt+Tab -> All desktops.
+STEP 023: Windows Key -> Tablet mode settings -> When I sign in -> Use Desktop mode.
+STEP 024: Windows Key -> Tablet mode settings -> When this device automatically switches tablet mode -> Don't ask m ad don't switch.
+STEP 025: Windows Key -> Clipboard settings -> Clipboard history -> On.
+STEP 026: Windows Key -> AutoPlay settings -> Off.
+STEP 027: Windows Key -> Control Panel -> Network and Internet -> Network and Sharing Center -> Change adapter settings -> Properties -> Configure -> Advanced -> Jumbo Packet -> Highest Amount.
+STEP 027: Windows Key -> Apps -> Uninstall all non nessesary apps.
+STEP 027: Windows Key -> Apps -> Web browser -> Google Chrome.
+STEP 028: Windows Key -> Apps -> Email -> Outlook.
+STEP 029: Windows Key -> Apps -> Video Player - VLC Media Player
+STEP 030: Windows Key -> Game Mode Settings -> Captures -> Open Folder -> Set to NAS.
+STEP 031: Windows Key -> Game Mode Settings -> Captures -> Recored this -> 4.
+STEP 032: Windows Key -> Game Mode Settings -> Captures -> Turn mic on by defualt when I record.
+STEP 033: Windows Key -> Game Mode Settings -> Captures -> Audio quality -> 192kbps.
+STEP 034: Windows Key -> Game Mode Settings -> Captures -> Recorded video -> Video frame rate -> 60.
+STEP 035: Windows Key -> Game Mode Settings -> Captures -> Recorded video -> Video quality -> High.
+STEP 036: Windows Key -> Game Mode Settings -> Broadcasting -> Audio quality -> 192kbps.
+STEP 037: Windows Key -> Cortana & Search settings -> Talk to Cortana -> Turn everythig off.
+STEP 038: Windows Key -> Cortana & Search settings -> Permission & History -> Turn Everything Off.
+STEP 039: Windows Key -> Privacy settings -> General -> All off.
+STEP 040: Windows Key -> Privacy settings -> Inking & typing personalization -> Off.
+STEP 041: Windows Key -> Privacy settings -> Diagnostics & feedback -> Diagnostic data -> Basic.
+STEP 042: Windows Key -> Privacy settings -> Diagnostics & feedback -> Tailored experience -> Off.
+STEP 043: Windows Key -> Privacy settings -> Diagnostics & feedback -> Feedback frequency - Never.
+STEP 044: Windows Key -> Privacy settings -> Activity history -> Store my activity history on this device -> Uncheck.
+STEP 045: Windows Key -> Privacy settings -> Location -> Allow apps to access your location -> Off.
+STEP 046: Windows Key -> Privacy settings -> Camera -> Off.
+STEP 047: Windows Key -> Privacy settings -> Microphone -> Off.
+STEP 048: Windows Key -> Privacy settings -> Notifcations -> Off.
+STEP 049: Windows Key -> Privacy settings -> Account info -> Off.
+STEP 050: Windows Key -> Privacy settings -> Contacts -> Off.
+STEP 051: Windows Key -> Privacy settings -> Calendar -> Off.
+STEP 052: Windows Key -> Privacy settings -> Call History -> Off.
+STEP 053: Windows Key -> Privacy settings -> Email -> Outlook.
+STEP 054: Windows Key -> Privacy settings -> Tasks -> Off.
+STEP 055: Windows Key -> Privacy settings -> Messaging -> Off.
+STEP 056: Windows Key -> Privacy settings -> Radios -> Off.
+STEP 057: Windows Key -> Privacy settings -> Other devices -> Off.
+STEP 058: Windows Key -> Privacy settings -> Bacground apps -> Off.
+STEP 059: Windows Key -> Privacy settings -> App diagnostics -> Off.
+STEP 060: Windows Key -> Privacy settings -> Documents -> Off.
+STEP 061: Windows Key -> Privacy settings -> Pictures -> Off.
+STEP 062: Windows Key -> Privacy settings -> Videos -> Off.
+STEP 063: Windows Key -> Privacy settings -> File System -> Off.
+
+
+
+https://notepad-plus-plus.org/download/v7.6.1.html
+STEP 1: Install Notepad++.
+STEP 2: NotePad++: Settings -> Style Configurator -> Select theme -> Deep Black.
+STEP 3: NotePad++: Settings -> Style Configurator -> Font Style -> Font name -> Calibri.
+STEP 4: NotePad++: Settings -> Style Configurator -> Font Style -> Font size -> 12.
+STEP 5: NotePad++: Settings -> Style Configurator -> Enable global font, Enable global font size. Save & Close.
+STEP 6: NotePad++: View -> Word wrap.
+STEP 7: NotePad++: Right Click a txt document -> Open with -> Choose another app -> More Apps -> Locate notepad++.exe
+
+https://www.google.com/chrome/
+STEP 001: Install Google Chrome
+STEP 002: Google: Sign into google.
+STEP 003: Google: "Google Chrome Dark Mode" and add the extension.
+STEP 004: Google: Settings -> Themes -> Material Incognito Dark Theme
+STEP 005: Google: Add new account and all bookmarks.
+
+STEP 001: Edge: Don't ask again.
+STEP 002: Edge: Settings -> Dark.
+STEP 003: Edge: Settings -> Customize -> Open Microsoft Edge with -> A specific page or pages -> https://www.google.com/ -> Save Button.
+STEP 004: Edge: Settings -> Set your homepage -> A specific page -> https://www.google.com/ -> Save Button.
+STEP 005: Edge: Settings -> Downloads -> Choose where to save -> NAS.
+STEP 006: Edge: Settings -> Choose search provider -> Google.
+STEP 007: Edge: Settings -> Always close all tabs.
+
+STEP 001: Install Spotify.
+STEP 002: Spotify: Account: dimaino@comcast.net Password: Daniel98058
+STEP 003: Spotify: Offline Song Storage -> NAS.
+
+STEP 001: Internet Explorer: Use recommended security and compatibility settings -> OK.
+STEP 002: Internet Explorer: Settings -> Internet Options -> Home page -> https://www.google.com/
+STEP 003: Internet Explorer: Settings -> Browsing history -> Delete browsing history on exit.
+
+STEP 001: Start Menu: Put up Microsoft office apps.
+STEP 002: Open the office apps.
+
+https://code.visualstudio.com/
+STEP 001: Install Microsoft Visual Studio Code.
+STEP 002: Add C# for Visual Studio Code (powered by OmniSharp) to the extensions.
+STEP 003: Add git Respoistory to cryptodimaino@gmail.com [CryptoDimaino]
+
+STEP 001: Task Bar -> File Explorer, Edge, Chrome, Notepad, Visual Studio Code.
+
+https://www.python.org/downloads/
+STEP 001: Install Python.
+STEP 002: Check Environment Variable to see if it installed.
+STEP 003: Update PIP -> python.exe -m pip install --upgrade pip
+STEP 004: Install Test environments for machine learning on NAS Development -> Python. python -m venv MachineLearning installs
+STEP 005: Test Environment with: going to the directory in cmd: MachineLearning\Scripts\activate.bat
+STEP 006: Install Scientific Python: python -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
+STEP 007: pip install --upgrade tensorflow
+STEP 008: Check if tensorflow installed: python -c
+STEP 009: Check all packages installed: pip list
+STEP 010: Leave the development environment: deactivate
+
+
+https://dev.mysql.com/downloads/windows/installer/8.0.html
+STEP 001: Install MySQL MSI download.
+STEP 002: 
+
+
+STEP AFTER Coding Stuff installed: Windows Key -> Edit Environment Variables for your account -> Environment Variables... -> PATH -> Edit -> 
+

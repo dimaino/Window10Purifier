@@ -2,7 +2,7 @@ function Title
 {
 	param
 	(
-		[string]$Title = 'Install Microsoft Apps'
+		[string]$Title = 'Uninstall Microsoft Apps'
 	)
 	cls
 	Write-Host "================ $Title ================"
@@ -12,31 +12,51 @@ Title
 
 $tweaks = @(
 	"RequireAdmin",
-	"InstallPhotoViewer"
+	"RemoveEditwith3DPaintFromMenu"
+	# "RestoreEditwith3DPaintFromMenu"
+	# "RemoveCastToDeviceFromMenu"
+	# "InstallPhotoViewer",
+	# "UninstallAllExceptThese"
 	# "DisableOneDrive",
-	#"UninstallOneDrive",
+	# "UninstallOneDrive",
 	#"UninstallMsftBloat",
 	#"UninstallThirdPartyBloat",
 	#"UninstallWindowsStore",
 	#"DisableXboxFeatures",
-	#"DisableAdobeFlash",
-	#"UninstallMediaPlayer",
-	#"UninstallInternetExplorer",
+	# "DisableAdobeFlash",
+	# "UninstallMediaPlayer",
+	# "UninstallInternetExplorer",
 	# "UninstallWorkFolders",
 	# "InstallLinuxSubsystem",
 	# "InstallHyperV",
 	#"SetPhotoViewerAssociation",
-	#"AddPhotoViewerOpenWith",
+	# "AddPhotoViewerOpenWith",
 	# "UninstallPDFPrinter",
-	#"UninstallXPSPrinter",
-	#"RemoveFaxPrinter"
+	# "UninstallXPSPrinter",
+	# "RemoveFaxPrinter"
 )
+
+$RegistryDirectory = Join-Path -Path (Split-Path (Split-Path (Split-Path $script:MyInvocation.MyCommand.Path) -Parent) -Parent) -ChildPath "RegistryFiles"
 
 Function RequireAdmin {
 	If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]"Administrator")) {
 		Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`" $PSCommandArgs" -WorkingDirectory $pwd -Verb RunAs
 		Exit
 	}
+}
+
+Function RemoveEditwith3DPaintFromMenu {
+	Write-Output $RegistryDirectory
+
+}
+
+Function RestoreEditwith3DPaintFromMenu {
+	Write-Output $PSScriptRoot
+	reg import $PSScriptRoot\Restore1.reg
+}
+Function RemoveCastToDeviceFromMenu {
+	Write-Output $PSScriptRoot
+	reg import $PSScriptRoot\RemoveCasttoDevice.reg
 }
 
 # Install PhotoViewer
@@ -133,6 +153,63 @@ Function UninstallMsftBloat {
 	Get-AppxPackage -AllUsers "Microsoft.ZuneVideo" | Remove-AppxPackage
 	#Get-AppxPackage -AllUsers "Windows.CBSPreview" | Remove-AppxPackage
 }
+
+# Uninstall all application except for these
+function UninstallAllExceptThese {
+	Get-AppxPackage -AllUsers | where-object {$_.name -notlike "Microsoft.NET.Native.Runtime.1.7"} |
+ 		where-object {$_.name -notlike "Microsoft.NET.Native.Runtime.2.2"} |
+ 		where-object {$_.name -notlike "Microsoft.WindowsStore"} |
+ 		where-object {$_.name -notlike "Microsoft.StorePurchaseApp"} |
+		where-object {$_.name -notlike "Microsoft.DirectXRuntime"} |
+		where-object {$_.name -notlike "Microsoft.WindowsCalculator"} |
+		where-object {$_.name -notlike "1527c705-839a-4832-9118-54d4Bd6a0c89"} |
+		where-object {$_.name -notlike "c5e2524a-ea46-4f67-841f-6a9465d9d515"} |
+		where-object {$_.name -notlike "E2A4F912-2574-4A75-9BB0-0D023378592B"} |
+		where-object {$_.name -notlike "F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE"} |
+		where-object {$_.name -notlike "InputApp"} |
+		where-object {$_.name -notlike "Microsoft.AccountsControl"} |
+		where-object {$_.name -notlike "Microsoft.AsyncTextService"} |
+		where-object {$_.name -notlike "Microsoft.BioEnrollment"} |
+		where-object {$_.name -notlike "Microsoft.CredDialogHost"} |
+		where-object {$_.name -notlike "Microsoft.ECApp"} |
+		where-object {$_.name -notlike "windows.immersivecontrolpanel"} |
+		where-object {$_.name -notlike "Microsoft.NET.Native.Runtime.2.2"} |
+		where-object {$_.name -notlike "Microsoft.NET.Native.Framework.2.2"} |
+		where-object {$_.name -notlike "Microsoft.NET.Native.Framework.1.7"} |
+		where-object {$_.name -notlike "Microsoft.NET.Native.Runtime.2.1"} |
+		where-object {$_.name -notlike "Microsoft.NET.Native.Framework.2.1"} |
+		where-object {$_.name -notlike "Microsoft.Windows.Cortana"} |
+		where-object {$_.name -notlike "Windows.PrintDialog"} |
+		where-object {$_.name -notlike "Microsoft.Windows.StartMenuExperienceHost"} |
+		where-object {$_.name -notlike "Microsoft.Windows.ShellExperienceHost"} |
+		where-object {$_.name -notlike "Microsoft.AAD.BrokerPlugin"} |
+		where-object {$_.name -notlike "Microsoft.MicrosoftEdge"} |
+		where-object {$_.name -notlike "Microsoft.Windows.CloudExperienceHost"} |
+		where-object {$_.name -notlike "Microsoft.Windows.ContentDeliveryManager"} |
+		where-object {$_.name -notlike "Windows.CBSPreview"} |
+		where-object {$_.name -notlike "Microsoft.XboxGameCallableUI"} |
+		where-object {$_.name -notlike "Microsoft.Windows.XGpuEjectDialog"} |
+		where-object {$_.name -notlike "Microsoft.Windows.SecureAssessmentBrowser"} |
+		where-object {$_.name -notlike "Microsoft.Windows.SecHealthUI"} |
+		where-object {$_.name -notlike "Microsoft.Windows.PinningConfirmationDialog"} |
+		where-object {$_.name -notlike "Microsoft.Windows.PeopleExperienceHost"} |
+		where-object {$_.name -notlike "Microsoft.Windows.ParentalControls"} |
+		where-object {$_.name -notlike "Microsoft.Windows.OOBENetworkConnectionFlow"} |
+		where-object {$_.name -notlike "Microsoft.Windows.OOBENetworkCaptivePortal"} |
+		where-object {$_.name -notlike "Microsoft.Windows.NarratorQuickStart"} |
+		where-object {$_.name -notlike "Microsoft.Windows.CapturePicker"} |
+		where-object {$_.name -notlike "Microsoft.Windows.CallingShellApp"} |
+		where-object {$_.name -notlike "Microsoft.Windows.AssignedAccessLockApp"} |
+		where-object {$_.name -notlike "Microsoft.Windows.Apprep.ChxApp"} |
+		where-object {$_.name -notlike "Microsoft.Win32WebViewHost"} |
+		where-object {$_.name -notlike "Microsoft.PPIProjection"} |
+		where-object {$_.name -notlike "Microsoft.MicrosoftEdgeDevToolsClient"} |
+		where-object {$_.name -notlike "Microsoft.LockApp"} |
+		where-object {$_.name -notlike "Microsoft.UI.Xaml.2.2"} |
+		where-object {$_.name -notlike "Microsoft.VCLibs.140.00"} |
+		Remove-AppxPackage
+}
+
 
 # Uninstall default third party applications
 function UninstallThirdPartyBloat {

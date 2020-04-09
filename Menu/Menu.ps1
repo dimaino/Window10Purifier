@@ -5,7 +5,8 @@ function Title
 		[string]$Title = 'Main Menu'
 	)
 	cls
-	Write-Host "================ $Title ================" 
+	Write-Host "================ $Title ================"
+	Write-Host ""
 	Write-Host "0: Press '0' Complete Setup."
 	Write-Host "1: Press '1' Microsoft Apps."
 	Write-Host "2: Press '2' Explorer Options."
@@ -18,6 +19,7 @@ function Title
 	Write-Host "9: Press '9' Windows Updates."
 	Write-Host "T: Press 'T' Tools."
 	Write-Host "Q: Press 'Q' to quit."
+	Write-Host ""
 }
 
 do
