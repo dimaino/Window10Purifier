@@ -46,8 +46,8 @@ Function RequireAdmin {
 }
 
 Function RemoveEditwith3DPaintFromMenu {
-	Write-Output $RegistryDirectory
-
+	Write-Output 'Removing Edit with 3D Paint from the context menu.'
+	reg import $RegistryDirectory\RemoveEditwith3DPaintFromMenu.reg
 }
 
 Function RestoreEditwith3DPaintFromMenu {

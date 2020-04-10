@@ -3,15 +3,18 @@ function Show-Menu
      param (
            [string]$Title = 'Update Windows'
      )
-     cls
+     Clear-Host
      Write-Host "================ $Title ================"
 }
 
 Show-Menu
 
 if($PSVersionTable.PSVersion.Major -eq 5) {
-	Install-Module -Name PSWindowsUpdate
-	Get-Command -module PSWindowsUpdate
-	Add-WUServiceManager -ServiceID 7971f918-a847-4430-9279-4a52d1efe18d
-	Get-WUInstall -MicrosoftUpdate -AcceptAll -AutoReboot
+      Write-Host "Checking for Windows Powershell is Installed."
+      Install-Module PSWindowsUpdate
+      Write-Host "Looking for Windows Update..."
+      Get-WindowsUpdate
+      Write-Host "Installing all updates and then rebooting..."
+      Install-WindowsUpdate -MicrosoftUpdate -AcceptAll -AutoReboot | Out-Null
+      Restart-Computer
 }
